@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$primary-font: 'Outfit', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
+$primary-color: #4F4DB9;
+$primary-gradient: linear-gradient(98.23deg, #615EEB 1.97%, #743EAB 74.16%);
+$black-color: #0A0825;
+$footer-gradient: linear-gradient(106.49deg, #6F46BC 26.12%, #4F4DB9 83.75%);
+$footer-input-color: rgba(104, 120, 190, 0.3);
+$bg-circle: rgba(66, 33, 99, 0.5);
+$company-bg: #141330;
+
+html,
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-size: 10px;
+    background: #0A0825;
+    font-style: normal;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 7rem;
+    line-height: 8.8rem;
+
+    color: #FFFFFF;
+}
+
+h2 {
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6.3rem;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+
+p {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin-top: 1.9rem;
+}
+
+.pcg {
+    color: #AAAAAA;
+}
+.hide
+{
+    display: none;
+}
+.main-btn {
+    color: #FFFFFF;
+    background-color: $primary-color;
+    border-radius: 30px;
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    padding: 1rem 2.3rem;
+    margin-top: 4.4rem;
+    text-transform: uppercase;
+    border: 1px solid $primary-color;
+    display: inline-block;
+    transition: all .3s ease-out;
+}
+
+.main-btn:hover {
+    color: $primary-color;
+    background: transparent;
+    border: 1px solid $primary-color;
+
+
+}
+
+.btn2 {
+    color: $primary-color;
+    background: transparent;
+    border-radius: 30px;
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.02em;
+    padding: 1rem 2.3rem;
+    margin-top: 4.4rem;
+    text-transform: uppercase;
+    border: 1px solid $primary-color;
+    display: inline-block;
+    transition: all .3s ease-out;
+}
+
+.btn2:hover {
+    color: #FFFFFF;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+}
+// custom scrollbar 
+::-webkit-scrollbar
+{
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track
+{
+    background-color: white;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: red;
+}
+
+.navbar 
+{
+    transition:  .3s ease-out;
+    text-align: center;
+}
+.navbar.nav-scroll
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $company-bg;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 999;
+}
+
+.navbar-wrapper {
+      width: 100%;
+      padding: 2.6rem 0rem;
+
+      .navbar-toggler:focus,
+      .navbar-toggler:hover
+      {
+        box-shadow: none;
+        outline: none;
+      }
+      .navbar-toggler
+      {
+        color: #FFFFFF;
+        font-size: 3rem;
+      }
+    .navbar-brand {
+        font-family: $primary-font;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: #FFFFFF;
+    }
+
+
+    .navbar-nav .nav-item .nav-link {
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-left: 6.2rem;
+        color: #FFFFFF;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        transition: all .2s ease-out;
+    }
+    .navbar-nav .nav-item .nav-link:hover,
+    .navbar-nav .nav-item .nav-link.active
+    {
+        color: red;
+    }
+    .navbar-nav .nav-item .nav-link::after
+    {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        border: 1px solid #0A0825;
+        transition: all .2s ease-out;
+    }
+    .navbar-nav .nav-item .nav-link:hover:after,
+    .navbar-nav .nav-item .nav-link:focus:after,
+    .navbar-nav .nav-item .nav-link.active:after
+{
+width: 100%;
+border: 1px solid red;
+
+}
+}
+
+
+// hero section 
+
+section {
+    margin: 10.5rem 0rem !important;
+    position: relative;
+
+}
+
+.home-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -35rem;
+    left: -25rem;
+    width: 65.2rem;
+    height: 68rem;
+    background: rgba(104, 120, 190, 0.3);
+    filter: blur(10rem);
+    border-radius: 50%;
+}
+.company p
+{
+    font-family: $primary-font;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.company::after {
+    content: "";
+    position: absolute;
+    top: -35rem;
+    right: -25rem;
+    width: 65.2rem;
+    height: 68rem;
+    background: rgba(104, 120, 190, 0.3);
+    filter: blur(10rem);
+    border-radius: 50%;
+}
+
+.company .comp-logo {
+    background: $company-bg;
+    border-radius: 5px;
+    padding: 4rem 0rem;
+    text-align: center;
+    margin-top: 2.7rem;
+}
+
+.team-wrapper .team {
+    margin-top: 13rem;
+    // margin-right: 5rem; 
+}
+
+
+
+.team-wrapper .card {
+    background: transparent;
+    max-width: 300px;
+    max-height: 400px;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.team-wrapper .card .card-img {
+    width: 20rem;
+    height: 25rem;
+}
+.team-wrapper .card .card-body p
+{
+    // display: inline-block;
+    width: 22rem;
+
+}
+
+.join-wrapper {
+    margin-top: 23.5rem !important;
+}
+
+.join-wrapper .content {
+    background: $primary-gradient;
+    border-radius: 20px;
+}
+
+.join-wrapper p {
+    font-weight: 700;
+    margin-top: 5.5rem;
+}
+
+.join-wrapper h2 {
+    margin-top: 6rem;
+}
+
+.join-wrapper .main-btn {
+    background-color: $black-color;
+    margin-bottom: 5.5rem;
+}
+
+.join-wrapper .main-btn:hover {
+    color: $black-color;
+    background: transparent;
+    border: 1px solid $black-color;
+}
+
+section.footer-section {
+    margin: 20rem 0rem !important;
+    // margin-bottom: 16rem;
+
+    h5 {
+        font-family: $primary-font;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: #FFFFFF;
+    }
+
+    h6 {
+        font-family: $primary-font;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        color: #FFFFFF;
+
+    }
+
+    ul {
+        margin-top: 2.8rem;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    ul li a {
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 3.1rem;
+        color: #FFFFFF;
+        margin: 2rem 0rem;
+        opacity: .7;
+    }
+
+    input {
+        display: inline-block;
+        background: rgba(104, 120, 190, 0.3);
+        border-radius: 20px;
+        padding: 1rem 1.2rem;
+        border: none;
+        outline: none;
+        width: 25rem;
+        margin-top: 4rem;
+
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 3rem;
+        color: #AAAAAA;
+
+    }
+
+    .footer-btn {
+        display: inline-block;
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: #FFFFFF;
+        border-radius: 20px;
+        background: $footer-gradient;
+        padding: 1.7rem 3rem;
+        width: 10rem;position: absolute;
+        top: 4rem;
+        left: 16rem;
+    }
+}
